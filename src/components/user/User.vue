@@ -385,10 +385,10 @@ export default {
             this.registerCommonForm.ok = false;
         },
         // 跳转普通账号弹窗开关
-         register_Commonc_lay() {
-             this.registerCommonClear = true;
-             this.registerClear = false;
-         },
+        register_Commonc_lay() {
+            this.registerCommonClear = true;
+            this.registerClear = false;
+        },
         // 关闭登录弹窗 清空表单值
         login_clera() {
             this.loginClear = false;
@@ -641,7 +641,7 @@ export default {
     .teb {
         width: 100vw;
         height: 13vw;
-        background-color: red;
+        // background-color: red;
         position: fixed;
         left: 0;
         bottom: 0;
@@ -1116,7 +1116,7 @@ export default {
         }
     }
     // 忘记密码弹窗
-    
+
 }
 // 4.63vw = 1.5rem    1rem = 12.77066666666667px   1vw = 4.14px
 </style>

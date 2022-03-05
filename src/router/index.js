@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/home/Home.vue'
 import User from '../components/user/User.vue'
+import Classify from '../components/home/classify/Classify.vue'
+import HandTour from '../components/home/classify/HandTour.vue'
 
 // 防止重复同一个路由跳转点击报错
 const originalPush = VueRouter.prototype.push
@@ -18,7 +20,18 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    redirect: '/home/classify',
+    component: Home,
+    children: [
+      {
+        path: '/home/classify',
+        component: Classify
+      },
+      {
+        path: '/home/handTour',
+        component: HandTour
+      },
+    ]
   },
   {
     path: '/user',
